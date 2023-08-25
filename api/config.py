@@ -47,6 +47,6 @@ bcrypt = Bcrypt(app)
 def index(id=0):
     return render_template("index.html")
 
-
+ 
 api = Api(app)
 CORS(app)
