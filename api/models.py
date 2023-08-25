@@ -10,7 +10,7 @@ from flask_login import UserMixin, LoginManager
 import re
 from datetime import datetime
 
-from config import db, bcrypt
+from api.config import db, bcrypt
 
 ############# Models Below #############
 

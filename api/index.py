@@ -1,16 +1,16 @@
 from flask_migrate import Migrate
 from flask import request
+from flask_restful import Resource
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from flask_bcrypt import generate_password_hash
-from config import app, db, api, Resource
-from models import db, User, Payment_Detail, Address, Product, Category, Review, Cart, Cart_Item, Order, OrderItem
+from api.config import app, db, api
+from api.models import db, User, Payment_Detail, Address, Product, Category, Review, Cart, Cart_Item, Order, OrderItem
 import datetime
 import traceback
 
 migrate = Migrate(app, db)
 login_manager = LoginManager()
 login_manager.init_app(app)
-
 
 # User and Login Routes
 
