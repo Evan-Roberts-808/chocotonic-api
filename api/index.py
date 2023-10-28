@@ -60,7 +60,7 @@ class Login(Resource):
                     return user.to_dict(), 200
             if not user:
                 return {'error': '404 user not found'}, 404
-        except:
+        except Exception:
             return {'error': '401 Unauthorized'}, 401
 
 
@@ -68,7 +68,7 @@ class Login(Resource):
 @login_required
 def logout():
     logout_user()
-    return f'You have logged out. Goodbye'
+    return 'You have logged out. Goodbye'
 
 
 class CheckSession(Resource):
